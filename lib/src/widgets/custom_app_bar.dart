@@ -5,6 +5,7 @@ PreferredSizeWidget customAppBar({
   String title,
   List<Widget> actions,
   bool showleading: true,
+  PreferredSizeWidget bottom,
 }) {
   bool showActions = false;
 
@@ -16,6 +17,7 @@ PreferredSizeWidget customAppBar({
     elevation: 0,
     backgroundColor: Colors.white,
     centerTitle: true,
+    bottom: bottom,
     leading: showleading
         ? IconButton(
       icon: Icon(
