@@ -25,6 +25,8 @@ class _ListProductsScreenState extends State<ListProductsScreen> {
           )
         ]
       ),
+      body: Container(),
+      bottomNavigationBar: Container(),
     );
   }
 }
