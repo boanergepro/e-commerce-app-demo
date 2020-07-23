@@ -33,11 +33,10 @@ class ItemProduct extends StatelessWidget {
                         alignment: Alignment.bottomCenter,
                         width: constraints.maxWidth,
                         child: ListTile(
+                          dense: true,
                           title: Text(
                             name,
                             style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
                               color: Colors.grey,
                             ),
                           ),
