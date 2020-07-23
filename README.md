@@ -6,6 +6,6 @@ Design extracted from [Capi creative - ui8.net](https://ui8.net/capi-creative/pr
 
 Images of the products extracted from [Stick PNG](https://www.stickpng.com/).
 
-### Procuduct List Screen
+### Product List Screen
 
 <img src="assets/screenshot/screen_product.png" height= "500px" width="300px">
