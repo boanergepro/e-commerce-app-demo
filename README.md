@@ -8,4 +8,4 @@ Images of the products extracted from [Stick PNG](https://www.stickpng.com/).
 
 ### Procuduct List Screen
 
-![picture](./assets/screenshot/screen_product.png =250x)
+<img src="assets/screenshot/screen_product.png" height= "500px" width="300px">
