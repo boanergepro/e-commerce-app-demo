@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/src/screens/cart_screen.dart';
 import 'package:ecommerceapp/src/widgets/custom_app_bar.dart';
 import 'package:ecommerceapp/src/widgets/custom_botttom_bar.dart';
 import 'package:ecommerceapp/src/widgets/item_product.dart';
@@ -71,21 +72,22 @@ class _ListProductsScreenState extends State<ListProductsScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: customAppBar(
-          title: 'New Trend',
-          ctx: context,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.shopping_cart,
-                color: Colors.black,
-              ),
-              onPressed: () {},
-            )
-          ],
-          bottom: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.white,
-            title: Row(
+        title: 'New Trend',
+        ctx: context,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.black,
+            ),
+            onPressed: () {},
+          )
+        ],
+        bottom: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: Expanded(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 CustomOutlineButton(
@@ -101,6 +103,7 @@ class _ListProductsScreenState extends State<ListProductsScreen> {
               ],
             ),
           ),
+        ),
       ),
       body: Container(
         margin: EdgeInsets.only(left: 8, top: 15, right: 8),
@@ -133,7 +136,9 @@ class _ListProductsScreenState extends State<ListProductsScreen> {
           NavigationBarItem(
             color: Colors.grey,
             iconData: Icons.shopping_cart,
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(CartScreen.routerName);
+            },
           ),
           NavigationBarItem(
             color: Colors.grey,
@@ -177,7 +182,7 @@ class CustomOutlineButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
-             iconData,
+              iconData,
               color: Colors.brown,
             ),
             SizedBox(

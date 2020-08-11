@@ -9,3 +9,7 @@ Images of the products extracted from [Stick PNG](https://www.stickpng.com/).
 ### Product List Screen
 
 <img src="assets/screenshot/screen_product.png" height= "500px" width="300px">
+
+### Cart Screen
+
+<img src="assets/screenshot/screen_cart.png" height= "500px" width="300px">
