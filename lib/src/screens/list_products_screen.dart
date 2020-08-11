@@ -83,40 +83,43 @@ class _ListProductsScreenState extends State<ListProductsScreen> {
             onPressed: () {},
           )
         ],
-        bottom: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          title: Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                CustomOutlineButton(
-                  title: 'Sort',
-                  iconData: Icons.sort,
-                  onTap: () {},
-                ),
-                CustomOutlineButton(
-                  title: 'Filter',
-                  iconData: Icons.filter_list,
-                  onTap: () {},
-                ),
-              ],
-            ),
-          ),
-        ),
       ),
       body: Container(
         margin: EdgeInsets.only(left: 8, top: 15, right: 8),
-        child: GridView.count(
-          crossAxisSpacing: 8,
-          crossAxisCount: 2,
-          childAspectRatio: (itemWidth / itemHeight),
-          controller: new ScrollController(keepScrollOffset: false),
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          children: List.generate(items.length, (index) {
-            return items[index];
-          }),
+        child: Column(
+          children: <Widget>[
+            Container(
+              width: size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  CustomOutlineButton(
+                    title: 'Sort',
+                    iconData: Icons.sort,
+                    onTap: () {},
+                  ),
+                  CustomOutlineButton(
+                    title: 'Filter',
+                    iconData: Icons.filter_list,
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: GridView.count(
+                crossAxisSpacing: 8,
+                crossAxisCount: 2,
+                childAspectRatio: (itemWidth / itemHeight),
+                controller: new ScrollController(keepScrollOffset: false),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: List.generate(items.length, (index) {
+                  return items[index];
+                }),
+              ),
+            )
+          ],
         ),
       ),
       bottomNavigationBar: CustomNavigationBar(
